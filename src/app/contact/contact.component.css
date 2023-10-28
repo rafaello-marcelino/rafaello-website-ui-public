@@ -1,0 +1,10 @@
+#main {
+    display: flex;
+    padding: 12px;
+    align-items: center; /* Vertical align the elements to the center */
+    min-height: fit-content;
+  }
+
+.details {
+    margin-bottom: 1px;
+}

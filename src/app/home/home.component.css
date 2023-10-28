@@ -1,0 +1,14 @@
+#main {
+    display: flex;
+    padding: 12px;
+    align-items: center; /* Vertical align the elements to the center */
+    min-height: fit-content;
+  }
+  
+  h5 {
+    margin: 0;
+  }
+  
+  button {
+    margin-left: auto; /* Push this element to the right */
+  }
