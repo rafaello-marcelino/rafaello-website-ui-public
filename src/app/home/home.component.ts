@@ -17,12 +17,28 @@ export class HomeComponent {
   message: string='';
   sendStatus: string = 'Message will be sent directly to my professional email';
   isLoading : boolean = false;
+  errorSend : boolean = false;
   constructor(private titleService: Title, 
     private downloadService: DownloadService,
     private emailService: EmailService,
     private formBuilder: FormBuilder) {
     this.titleService.setTitle('Rafaello - Home')
   }
+
+  slides: string [] = ['./assets/image Slide/01.jpg', './assets/image Slide/02.jpg', './assets/image Slide/03.jpg', './assets/image Slide/04.jpg', './assets/image Slide/05.jpg']
+    i=0;
+
+    getSlide() {
+        return this.slides[this.i];
+    }
+
+    getPrev() {
+      this.i = this.i===0 ? this.slides.length-1 : this.i - 1;
+    }
+  //edit here    
+    getNext() {
+        this.i = this.i===this.slides.length-1 ? 0 : this.i + 1;
+    }
   
   public  downloadResume(): void {
     this.downloadService.downloadResume().subscribe(
@@ -59,11 +75,13 @@ export class HomeComponent {
             this.email = '';
             this.message = '';
             this.sendStatus = 'Email has been sent'
+            this.errorSend = false;
             this.isLoading = false;
         }
       },
       error: (error: any) => {
         this.isLoading = false;
+        this.errorSend = true;
         this.sendStatus = 'Error occurred please try again later'
 
       }
