@@ -5,6 +5,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { EmailService } from '../service/email.service';
 import { Email } from '../email';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-home',
@@ -58,6 +59,12 @@ export class HomeComponent {
   //   });
   }
 
+  // emailjs.send("service_8x6vwqa","template_tydg15w",{
+  //   from_name: "rafaello marcelino",
+  //   message: "asdfasdfa",
+  //   reply_to: "rafaello.work@gmail.com",
+  //   });
+    
 
 
   result: string = '';
@@ -67,32 +74,52 @@ export class HomeComponent {
     message: ''
   };
 
-  public sendEmail() {
+  async sendEmail() {
     this.isLoading = true;
-    this.emailForm.name = this.name;
-    this.emailForm.email = this.email;
-    this.emailForm.message = this.message; 
-    const emailResponse = {
-      next: (response: any) => {
-        if(response == 'Sent') {
+    emailjs.init('kIcKakeI3XcF677zX');
+     
+  let response = await emailjs.send("service_8x6vwqa","template_tydg15w",{
+    from_name: this.name,
+    message: this.message,
+    reply_to: this.email,
+    }).then((result: EmailJSResponseStatus) => {
             this.name = '';
             this.email = '';
             this.message = '';
             this.sendStatus = 'Email has been sent'
             this.errorSend = false;
             this.isLoading = false;
-        }
-      },
-      error: (error: any) => {
-        this.isLoading = false;
+    }, (error) => {
+      this.isLoading = false;
         this.errorSend = true;
         this.sendStatus = 'Error occurred please try again later'
+    });
 
-      }
-    };
 
-    this.emailService.sendEmail(this.emailForm).subscribe(emailResponse); 
+    
+    // const emailResponse = {
+    //   next: (response: any) => {
+    //     if(response == 'Sent') {
+    //         this.name = '';
+    //         this.email = '';
+    //         this.message = '';
+    //         this.sendStatus = 'Email has been sent'
+    //         this.errorSend = false;
+    //         this.isLoading = false;
+    //     }
+    //   },
+    //   error: (error: any) => {
+    //     this.isLoading = false;
+    //     this.errorSend = true;
+    //     this.sendStatus = 'Error occurred please try again later'
 
+    //   }
+    // };
+    // this.emailForm.name = this.name;
+    // this.emailForm.email = this.email;
+    // this.emailForm.message = this.message; 
+    // this.emailService.sendEmail(this.emailForm).subscribe(emailResponse); 
+   
   }
 
 }
