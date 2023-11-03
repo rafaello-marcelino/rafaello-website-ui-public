@@ -35,10 +35,7 @@ export class HomeComponent {
 }
 
   public  downloadResume(): void {
-      let link = document.createElement("a");
-      link.download = "Rafaello Marcelino - Software Developer.pdf";
-      link.href = "./assets/Rafaello Marcelino - Software Developer.pdf";
-      link.click();
+  // will restore when back end is fixed/deployed
   //   this.downloadService.downloadResume().subscribe(
   //     response => {
   //       const file = response;
@@ -50,15 +47,12 @@ export class HomeComponent {
   //       link.download = 'Rafaello Marcelino - Software Developer.pdf';
   //       link.click();
   //   });
+      let link = document.createElement("a");
+      link.download = "Rafaello Marcelino - Software Developer.pdf";
+      link.href = "./assets/Rafaello Marcelino - Software Developer.pdf";
+      link.click();
+ 
   }
-
-  // emailjs.send("service_8x6vwqa","template_tydg15w",{
-  //   from_name: "rafaello marcelino",
-  //   message: "asdfasdfa",
-  //   reply_to: "rafaello.work@gmail.com",
-  //   });
-    
-
 
   result: string = '';
   emailForm : Email = {
@@ -69,27 +63,7 @@ export class HomeComponent {
 
   async sendEmail() {
     this.isLoading = true;
-    emailjs.init('kIcKakeI3XcF677zX');
-     
-  let response = await emailjs.send("service_8x6vwqa","template_tydg15w",{
-    from_name: this.name,
-    message: this.message,
-    reply_to: this.email,
-    }).then((result: EmailJSResponseStatus) => {
-            this.name = '';
-            this.email = '';
-            this.message = '';
-            this.sendStatus = 'Email has been sent'
-            this.errorSend = false;
-            this.isLoading = false;
-    }, (error) => {
-      this.isLoading = false;
-        this.errorSend = true;
-        this.sendStatus = 'Error occurred please try again later'
-    });
-
-
-    
+    // will restore when back end is fixed/deployed
     // const emailResponse = {
     //   next: (response: any) => {
     //     if(response == 'Sent') {
@@ -113,6 +87,30 @@ export class HomeComponent {
     // this.emailForm.message = this.message; 
     // this.emailService.sendEmail(this.emailForm).subscribe(emailResponse); 
    
+
+    //temporary fix for email service
+    emailjs.init('kIcKakeI3XcF677zX');
+     
+    let response = await emailjs.send("service_8x6vwqa","template_tydg15w",{
+    from_name: this.name,
+    message: this.message,
+    reply_to: this.email,
+    }).then((result: EmailJSResponseStatus) => {
+            this.name = '';
+            this.email = '';
+            this.message = '';
+            this.sendStatus = 'Email has been sent'
+            this.errorSend = false;
+            this.isLoading = false;
+    }, (error) => {
+      this.isLoading = false;
+        this.errorSend = true;
+        this.sendStatus = 'Error occurred please try again later'
+    });
+
+
+    
+
   }
 
 }
