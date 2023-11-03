@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DownloadService } from '../service/download.service';
 import { HttpErrorResponse } from '@angular/common/http';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { EmailService } from '../service/email.service';
 import { Email } from '../email';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
@@ -19,6 +19,8 @@ export class HomeComponent {
   sendStatus: string = 'Message will be sent directly to my professional email';
   isLoading : boolean = false;
   errorSend : boolean = false;
+  isEmailValid:boolean = true;
+  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"; 
   constructor(private titleService: Title, 
     private downloadService: DownloadService,
     private emailService: EmailService,
@@ -26,21 +28,12 @@ export class HomeComponent {
     this.titleService.setTitle('Rafaello - Home')
   }
 
-  slides: string [] = ['./assets/image Slide/01.jpg', './assets/image Slide/02.jpg', './assets/image Slide/03.jpg', './assets/image Slide/04.jpg', './assets/image Slide/05.jpg']
-    i=0;
+  validateEmail(){
+    // suppose value is"https://www.google.com";
+    var patt = new RegExp(this.emailPattern);
+    this.isEmailValid = patt.test(this.email);
+}
 
-    getSlide() {
-        return this.slides[this.i];
-    }
-
-    getPrev() {
-      this.i = this.i===0 ? this.slides.length-1 : this.i - 1;
-    }
-  //edit here    
-    getNext() {
-        this.i = this.i===this.slides.length-1 ? 0 : this.i + 1;
-    }
-  
   public  downloadResume(): void {
       let link = document.createElement("a");
       link.download = "Rafaello Marcelino - Software Developer.pdf";
