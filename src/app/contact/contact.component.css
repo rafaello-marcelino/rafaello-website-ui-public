@@ -1,10 +1,31 @@
-#main {
-    display: flex;
-    padding: 12px;
-    align-items: center; /* Vertical align the elements to the center */
-    min-height: fit-content;
-  }
 
-.details {
-    margin-bottom: 1px;
+@media (min-width: 320px){
+  .mapresp {
+      display: none;
+  }
+}
+@media (min-width: 375px){
+  .mapresp {
+      display: none;
+  }
+}
+@media (min-width: 425px){
+  .mapresp {
+      display: none;
+  }
+}
+@media (min-width: 768px){
+  .mapresp {
+      display: block;
+  }
+}
+@media (min-width: 1440px){
+  .mapresp {
+      display: block;
+  }
+}
+@media (min-width: 2560px){
+  .mapresp {
+      display: block;
+  }
 }

@@ -1,220 +1,61 @@
-<section class="text-gray-600 body-font">
-    <div class="container px-2 pt-14 pb-6 mx-auto flex flex-col">
-      <div class="lg:w-5/6 mx-auto">
-        <div class="rounded-lg h-80 overflow-hidden">
-          <img alt="content" class="object-cover object-center h-full w-full" src="./assets/altumcode-dMUt0X3f59Q-unsplash.jpg">
+<section id="home" class="text-gray-600 navresp z-30 fixed left-0 ">
+    <div class="px-3 py-12  flex flex-wrap">
+      <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 ">
+        <div class="flex-grow flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="about-tooltip" >
+            <a href="#aboutMe">
+                <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/person.gif">
+            </a>
+            </div>
+            <div id="about-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              About Me
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
         </div>
-        <div class="flex flex-col sm:flex-row mt-4">
-          <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-            <!-- <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-            </div> -->
-            <span class="text-sm text-white">Picture should be here but mehh</span>
-            <div class="flex flex-col items-center text-center justify-center">
-              <h2 class="font-medium title-font mt-4 text-gray-900 text-3xl">Rafaello Marcelino</h2>
-              <div class="w-3/4 h-1 bg-gray-500 rounded mt-2 mb-4"></div>
-              <p class="text-base text-lg">Software Engineer</p>
+      </div>
+      <div class="flex relative pb-20 sm:items-center md:w-2/3 ">
+        <div class="flex-grow  flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="gear-tooltip" >
+            <a href="#experience">
+                <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/code.gif">
+            </a>
+            <div id="gear-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Experience
+              <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
           </div>
-          <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-            <p class="leading-relaxed text-lg mb-4">
-                Experienced Software Developer with over 6 years in full-stack web development. 
-                Proficient in crafting front-end user interfaces and robust back-end processing software.
-                Accomplished in writing, testing, and debugging web applications, resulting in a reduction in error rates.
-                Demonstrated expertise in optimizing web functionality, leading to improvement in data retrieval and workflow efficiency.
-            </p>
-            
+        </div>
+      </div>
+      <div class="flex relative pb-20 sm:items-center md:w-2/3">
+        <div class="flex-grow flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="current-tooltip" >
+            <a href="#current">
+                <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/comp.gif">
+            </a>
+            <div id="current-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Current Projects
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex relative pb-20 sm:items-center md:w-2/3">
+        <div class="flex-grow flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="contact-tooltip" >
+            <a href="#contact">
+                <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/mail.gif">
+            </a>
+            <div id="contact-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Contact Me
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-<div class="container px-2 sm:w-5/6">
-    <div class="row">
-        <div id="main" class="col-lg shadow ">
-        <p class="px-5">Learn more about my professional career by downloading my Resume.</p>
-        <button class="btn focus:outline-none hover:bg-gray-600 text-white bg-gray-500 px-5 flex inline-flex" (click)="downloadResume()">
-            <svg class="fill-current w-4 h-4 mt-1 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/>
-            </svg>
-            Download</button>
-        </div>
-    </div>
-</div>
 
-<section class="text-gray-600 body-font">
-    <div class="container px-2 py-10">
-        <h1 class="text-gray-900 text-2xl mb-1 font-lg flex title-font"><img src="./assets//code.gif" alt="loc pin"  width="35" height="30">
-            <p class="px-3">Latest Experience</p>
-        </h1>
-    </div>
-    <div class="container py-20 mx-auto">
-        <div class="flex items-center lg:w-4/5 mx-auto pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-gray-100 text-gray-700 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16 sm:h-16 w-10 h-10">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
-                </svg>
-            </div>
-            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Business Analyst</h2>
-                <p class="text-gray-900 text-sm title-font font-medium mb-2">Malogica Solutions : Jan 2023 - Apr 2023</p>
-                <p class="leading-relaxed text-base">Enhanced back-end Java software, optimized API response times. 
-                    Led Scrum ceremonies, reduced project turnaround time. 
-                    Upgraded system behavior via documentation. 
-                    Generated User Stories for efficiency. 
-                    Ensured testing environment, maintained clean test data.</p>
-            </div>
-        </div>
-        <div class="flex items-center lg:w-4/5 mx-auto pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-gray-100 text-gray-700 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16 sm:h-16 w-10 h-10">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                </svg>
-            </div>
-            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Software Engineer</h2>
-                <p class="text-gray-900 text-sm title-font font-medium mb-2">Tyler Technologies : Aug 2021 - Dec 2022</p>
-                <p class="leading-relaxed text-base">Enhanced web apps through Java code refactoring. 
-                    Designed and coded front-end solutions with jQuery, JavaScript, and HTML. 
-                    Improved onboarding and cross-team collaboration via updated documentation.</p>
-            </div>
-        </div>
-        <div class="flex items-center lg:w-4/5 mx-auto pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-            <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-gray-100 text-gray-700 flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16 sm:h-16 w-10 h-10">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
-                </svg>
-                
-            </div>
-            <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Software Engineer</h2>
-                <p class="text-gray-900 text-sm title-font font-medium mb-2">RCG Global Services  : Apr 2019 - Aug 2021</p>
-                <p class="leading-relaxed text-base">Enhanced web apps with AngularJS and Java 8.
-                    Addressed errors, minimizing downtime and optimizing software.
-                    Debugged and supported client environments, improving reliability.
-                    Provided crucial production support, ensuring uninterrupted operations.</p>
-            </div>
-        </div>
-    </div>
-  </section>
-  <section class="text-gray-600 body-font">
-    <div class="container px-2 py-2">
-        <h1 class="text-gray-900 text-2xl mb-1 font-lg flex title-font"><img src="./assets//comp.gif" alt="loc pin"  width="35" height="30">
-            <p class="px-3">Current Project:</p>
-        </h1>
-    </div>
-    <div class="container mx-auto flex  px-5 py-8 md:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-2/3 mb-10 md:mb-0">
-            <div id="default-carousel" class="relative w-full" data-carousel="slide">
-                <!-- Carousel wrapper -->
-                <div class="relative h-full overflow-hidden rounded-lg md:h-96">
-                    <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./assets/image Slide/01.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./assets/image Slide/02.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./assets/image Slide/03.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./assets/image Slide/04.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 5 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./assets/image Slide/05.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                </div>
-                <!-- Slider indicators -->
-                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-                </div>
-                <!-- Slider controls -->
-                <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-            </div>
-        </div>
-      <div class=" md:w-1/3 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Photography Portfolio
-        </h1>
-        <p class="mb-8 leading-relaxed">
-            I am an amateur photographer and want to make a photo portfolio for myself. If you want to see the progress please visit my coding  
-            <a href="https://rafaello-marcelino.github.io/playground-ui/" target="_blank"
-            class="text-black hover:text-grey-300 italic">playground</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="contact" class="text-gray-600 body-font relative">
-    <div class="container px-2 py-10">
-        <h1 class="text-gray-900 text-2xl mb-1 font-lg flex title-font"><img src="./assets//mail.gif" alt="loc pin"  width="35" height="30">
-            <p class="px-3">Contact Me</p>
-        </h1>
-    </div>
-    <div class="container px-2 mb-20 mx-auto flex justify-center">
-        <div class="lg:flex-grow bg-gray-300 mapresp rounded-lg p-10 flex justify-end content-end relative">
-            <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;ie=UTF8&amp;q=Ontario,+CA/@34.0340758&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
-            <div class=" bg-white relative py-6 w-50 h-13 rounded shadow-md">
-                <div class=" px-6 mt-4 lg:mt-0">
-                    <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-                    <p class="mt-1 flex"><img src="./assets//pin.gif" alt="loc pin"  width="25" height="25">  Ontario, California, United States</p>
-                    <span class="text-sm text-white">I'm bored I need a job</span>
-                    <h2 class="title-font font-semibold overflow-hidden text-gray-900 tracking-widest text-xs">EMAIL</h2>
-                    <p class=" flex leading-relaxed"><img src="./assets//email.gif" alt="loc pin"  width="25" height="25">  rafaello.work&#64;gmail.com</p>
-                </div>
-            </div>
-        </div>
-        <div class="lg:w-1/3  bg-white">
-            <div class="relative items-center max-w-sm p-2 rounded-lg ">
-                <div role="status" *ngIf="isLoading" class="absolute z-50 w-full h-full bg-gray-100 -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2" style="filter: opacity(0.4);">
-                    <span class="block" style="width: 25%; height: 15%; margin-left: 33%; margin-top: 58%;">
-                        <img src="./assets//wired-outline-1414-circle.gif" alt="Loading" style="width: 100%; height: 100%;">
-                    </span>
-                </div>
-                <div class="relative mb-4">
-                    <label for="name" class="leading-7 text-sm text-gray-600 inline-flex">Name <p class="text-red-600">*</p> </label>
-                    <input type="text" [(ngModel)]="name" required id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-                <div class="relative mb-4">
-                    <label for="email" class="leading-7 text-sm text-gray-600 inline-flex">Email<p class="text-red-600">*</p> </label>
-                    <input [pattern]="emailPattern" type="email" [(ngModel)]="email" (blur)="validateEmail()" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                    <span *ngIf="isEmailValid" class="text-sm text-white">easter egg hunts</span>
-                    <span *ngIf="!isEmailValid" class="text-sm text-red-600">Please enter a valid email</span>
-                </div>
-                <div class="relative mb-4">
-                    <label for="message" class="leading-7 text-sm text-gray-600 inline-flex">Message<p class="text-red-600">*</p></label>
-                    <textarea id="message" required [(ngModel)]="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-                </div>
-                <button type="submit"  (click)="sendEmail()" [disabled]="message === '' || name ==='' || email === '' || isLoading" class="text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 disabled:bg-gray-100 rounded text-lg">Send</button>
-                <p class="text-xs text-gray-500 mt-3" [ngClass]="{'text-red-500': errorSend}">{{sendStatus}}</p>
-            </div>
-        </div>
-    </div>
-</section>
+<app-about></app-about>
+<app-exper></app-exper>
+<app-current></app-current>
+<app-contact></app-contact>
