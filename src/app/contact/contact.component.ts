@@ -24,7 +24,6 @@ export class ContactComponent {
     private titleService: Title, 
     private emailService: EmailService,
     private formBuilder: FormBuilder) {
-    this.titleService.setTitle('Rafaello - Contact');
   }
   
   result: string = '';
