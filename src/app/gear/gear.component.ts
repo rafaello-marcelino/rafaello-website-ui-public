@@ -1,15 +1,19 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-gear',
   templateUrl: './gear.component.html',
   styleUrls: ['./gear.component.css']
 })
-export class GearComponent {
+export class GearComponent  implements OnInit{
   modalSource : string = '';
   @HostListener('contextmenu', ['$event'])
   onRightClick(event: { preventDefault: () => void; }) {
   event.preventDefault();
+}
+ngOnInit(): void {
+  initFlowbite();
 }
   img01: string = "./assets/website/Gear/gear.jpg";
   img02: string = "./assets/website/Gear/Cameras.jpg";
