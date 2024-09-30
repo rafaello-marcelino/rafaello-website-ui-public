@@ -1,0 +1,48 @@
+<div class="row">
+    <section id="home" class="text-gray-600 invisible md:visible 2xl:visible lg:visible z-30 fixed left-0 ">
+        <div class="px-5 py-24  flex flex-wrap">
+          <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 ">
+            <div class="flex-grow flex sm:items-center items-start flex-col sm:flex-row">
+                <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="about-tooltip" >
+                <a href="#aboutMe">
+                    <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/person.gif">
+                </a>
+                </div>
+                <div id="about-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  About Me
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+          </div>
+          <div class="flex relative pb-20 sm:items-center md:w-2/3 ">
+            <div class="flex-grow  flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="gear-tooltip" >
+                <a href="#gear">
+                    <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/cam.gif">
+                </a>
+                <div id="gear-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Camera Gear
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex relative pb-20 sm:items-center md:w-2/3">
+            <div class="flex-grow flex sm:items-center items-start flex-col sm:flex-row">
+              <div class="flex-shrink-0 w-9 h-9 bg-grey-300 rounded-full inline-flex items-center justify-center" data-tooltip-target="contact-tooltip" >
+                <a href="#contact">
+                    <img class="object-cover object-center rounded" alt="hero" class="rounded-full" src="./assets/mail.gif">
+                </a>
+                <div id="contact-tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Contact Me
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <app-aboutme></app-aboutme>
+    <app-gear></app-gear>
+</div>

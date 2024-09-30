@@ -1,0 +1,26 @@
+@media (min-width: 425px){
+    .xsm {
+        margin-top: 10rem ;
+    }
+}
+@media (min-width: 375px){
+    .xsm {
+        margin-top: 10rem ;
+    }
+}
+@media (min-width: 320px){
+    .xsm {
+        margin-top: 10rem ;
+    }
+}
+@media (min-width: 453px){
+    .xsm {
+        margin-top: 9rem ;
+    }
+}
+
+@media (min-width: 768px){
+    .xsm {
+        margin-top: 6rem ;
+    }
+}

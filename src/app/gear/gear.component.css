@@ -1,0 +1,35 @@
+@media (min-width: 320px){
+    .carouselresp {
+        height: 75rem;
+    }
+}
+@media (min-width: 375px){
+    .carouselresp {
+        height: 66rem;
+    }
+}
+@media (min-width: 425px){
+    .carouselresp {
+        height: 64rem;
+    }
+}
+@media (min-width: 768px){
+    .carouselresp {
+        height: 51rem;
+    }
+}
+@media (min-width: 1024px){
+    .carouselresp {
+        height: 71rem;
+    }
+}
+@media (min-width: 1440px){
+    .carouselresp {
+        height: 74rem;
+    }
+}
+@media (min-width: 2560px){
+    .carouselresp {
+        height: 75rem;
+    }
+}

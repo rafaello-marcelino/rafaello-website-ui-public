@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -15,11 +14,21 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { CurrentComponent } from './current/current.component';
 import { ExperComponent } from './exper/exper.component';
+import { PhotoComponent } from './photo/photo.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { GearComponent } from './gear/gear.component';
+import { PhotonavComponent } from './photonav/photonav.component';
+import { SamplesComponent } from './samples/samples.component';
+import { AstroComponent } from './astro/astro.component';
+import { LandComponent } from './land/land.component';
+import { BirdsComponent } from './birds/birds.component';
+import { StreetComponent } from './street/street.component';
+import { RandomsComponent } from './randoms/randoms.component';
+import { PhotohomeComponent } from './photohome/photohome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     NavComponent,
     HomeComponent,
     ProjectsComponent,
@@ -28,7 +37,18 @@ import { ExperComponent } from './exper/exper.component';
     FooterComponent,
     AboutComponent,
     CurrentComponent,
-    ExperComponent
+    ExperComponent,
+    PhotoComponent,
+    AboutmeComponent,
+    GearComponent,
+    PhotonavComponent,
+    SamplesComponent,
+    AstroComponent,
+    LandComponent,
+    BirdsComponent,
+    StreetComponent,
+    RandomsComponent,
+    PhotohomeComponent
   ],
   imports: [
     BrowserModule,
